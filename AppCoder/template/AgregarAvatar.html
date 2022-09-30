@@ -4,17 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django | Home</title>
+    <title>Avatar</title>
 </head>
 <body>
-    <!--Comentando-->
-    Bienvenido a la pagina Home.
-    <br>
-    Hola {{nombre}} {{apellido}}
-    <br>
-    {%for n in lista%}
-        {{n}}
-        <br>
-    {%endfor%}
+    <form action="" method="POST" enctype="multipart/form-data"> {%csrf_token%}
+        {{ form.as_p}}
+        <input type="submit" value="Aceptar">
+    </form>
 </body>
 </html>
